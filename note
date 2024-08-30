@@ -1,0 +1,34 @@
+IBOutlet
+Definition: IBOutlet stands for "Interface Builder Outlet."
+Purpose: It is used to create a connection from a UI component (like a UILabel, UIButton, etc.) in a storyboard or XIB file to a property in your code. This allows you to reference and manipulate the UI component programmatically.
+Example:
+swift
+Copy code
+@IBOutlet weak var titleLabel: UILabel!
+In this example, the titleLabel is a reference to a UILabel defined in your storyboard.
+2. IBOutletCollection
+Definition: IBOutletCollection is used to connect multiple UI components of the same type to a single property.
+Purpose: It is useful when you want to perform the same action on multiple UI components (e.g., changing the color of several buttons).
+Example:
+swift
+Copy code
+@IBOutlet var buttonCollection: [UIButton]!
+Here, buttonCollection is an array of UIButton objects connected to multiple buttons in your storyboard.
+3. IBAction
+Definition: IBAction stands for "Interface Builder Action."
+Purpose: It is used to define a method that is triggered by a user interaction, such as tapping a button or selecting a value from a picker. You connect this method to a UI component in the storyboard to handle events.
+Example:
+swift
+Copy code
+@IBAction func buttonTapped(_ sender: UIButton) {
+    print("Button was tapped")
+}
+This method will be called whenever the connected button is tapped.
+4. IBActionCollection
+Definition: IBActionCollection is not an officially recognized keyword in Swift.
+Purpose: There isn't a concept called IBActionCollection in Swift. For connecting multiple actions to a single control, you typically use IBAction methods.
+Summary
+IBOutlet connects a UI component to a property.
+IBOutletCollection connects multiple UI components of the same type to a single array property.
+IBAction defines a method to handle user interactions.
+IBActionCollection does not exist; instead, multiple actions are typically handled using IBAction methods.
